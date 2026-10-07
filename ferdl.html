@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danke Ferdl 💙</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(to bottom,#0f172a,#1e293b);
+    font-family:Arial,sans-serif;
+    color:white;
+    text-align:center;
+}
+
+.container{
+    max-width:800px;
+    padding:30px;
+}
+
+h1{
+    font-size:60px;
+    color:#60a5fa;
+}
+
+p{
+    font-size:24px;
+    line-height:1.8;
+}
+
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    font-size:22px;
+    border-radius:12px;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+#popup{
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:white;
+    color:black;
+    width:70%;
+    max-width:700px;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 0 30px black;
+    z-index:1000;
+}
+
+#popup p{
+    font-size:28px;
+}
+
+#overlay{
+    display:none;
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    top:0;
+    left:0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💙 Danke Ferdl 💙</h1>
+
+<p>
+Diese Webseite ist für einen Menschen,
+der an mich geglaubt hat, als vieles noch unsicher war.
+</p>
+
+<p>
+Danke für den Laptop.<br>
+Danke für deine Unterstützung.<br>
+Danke für dein Vertrauen.
+</p>
+
+<button onclick="zeigeNachricht()">
+💙 Nachricht öffnen
+</button>
+
+</div>
+
+<div id="overlay"></div>
+
+<div id="popup">
+
+<p>
+💙 Ferdl, i hob di liab. 💙
+<br><br>
+
+Danke, dass'd an mi glaubt host,
+ois no nix sicher war.
+
+<br><br>
+
+Danke fia'n Laptop.
+Danke fia dei Unterstützung.
+Danke fia ois, wos'd fia mi gmacht host.
+
+<br><br>
+
+Ohne di war i heit ned do,
+wo i bin.
+
+<br><br>
+
+Des is mei kloans Dankeschön an di. 💙
+</p>
+
+<button onclick="schliessen()">
+Schließen
+</button>
+
+</div>
+
+<script>
+function zeigeNachricht(){
+    document.getElementById("popup").style.display="block";
+    document.getElementById("overlay").style.display="block";
+}
+
+function schliessen(){
+    document.getElementById("popup").style.display="none";
+    document.getElementById("overlay").style.display="none";
+}
+</script>
+
+</body>
+</html>
